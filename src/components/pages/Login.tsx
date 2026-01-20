@@ -37,8 +37,10 @@ export const Login = ()=>{
         
         showLoginAlert("Inicio de sesion exitoso", "success");
         setToken(res.accessToken);
-           
+        localStorage.setItem("refreshToken", res.refreshToken);
         setUser("authenticated");
+
+        setTimeout(() => location.href = "/tickets-manager", 2000);
     }
     return(
 <div className=" flex flex-col items-center justify-center p-4 mb-20">
@@ -53,7 +55,7 @@ export const Login = ()=>{
       type="text"
       name="email"
       onChange={handleChange}
-      className="border border-blue-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+      className="border border-green-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-green-500"
     />
 
     <label htmlFor="password" className="text-lg font-medium text-black">
@@ -63,7 +65,7 @@ export const Login = ()=>{
       type="password"
       name="password"
       onChange={handleChange}
-      className="border border-blue-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+      className="border border-green-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-green-500"
     />
 
     <button

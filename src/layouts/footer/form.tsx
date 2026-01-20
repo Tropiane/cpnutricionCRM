@@ -33,7 +33,7 @@ function Form() {
             <input className="border border-gray-400 p-2 rounded" type="text" name="phone" onChange={handleChange}/>
             <label htmlFor="description">Consulta</label>
             <input className="border border-gray-400 p-2 rounded" type="text" name="description" onChange={handleChange}/>
-            <button type="submit" onClick={handleSubmit} className="bg-yellow-600 p-5 text-xl rounded active:bg-yellow-500 cursor-pointer">Enviar</button>
+            <button type="submit" onClick={handleSubmit} className="bg-green-600 p-5 text-xl rounded active:bg-blue-500 cursor-pointer">Enviar</button>
         </form>
     )
 }

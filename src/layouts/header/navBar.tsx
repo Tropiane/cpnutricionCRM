@@ -44,8 +44,8 @@ function NavBar({ isFooter }: { isFooter: boolean }) {
           </summary>
 
           <div className="mt-4 flex flex-col gap-3 pl-2 border-l border-gray-700">
-            <a href="#footer" className="text-lg hover:text-blue-400 transition">Contacto</a>
-            <a href="#planes" className="text-lg hover:text-blue-400 transition">Planes</a>
+            <a href="#footer" className="text-lg hover:text-green-400 transition">Contacto</a>
+            <a href="#planes" className="text-lg hover:text-green-400 transition">Planes</a>
             {enlaces.map((enlace) => (
               <LinkTarget key={enlace.id} link={enlace.link} text={enlace.text} />
             ))}
@@ -58,8 +58,8 @@ function NavBar({ isFooter }: { isFooter: boolean }) {
   // Desktop version
   return (
     <nav className="flex flex-row gap-8 items-center text-black py-4 px-6 shadow-md">
-      <a href="#footer" className="text-lg hover:text-blue-400 transition">Contacto</a>
-      <a href="#planes" className="text-lg hover:text-blue-400 transition">Planes</a>
+      <a href="#footer" className="text-lg hover:text-green-400 transition">Contacto</a>
+      <a href="#planes" className="text-lg hover:text-green-400 transition">Planes</a>
       {enlaces.map((enlace) => (
         <LinkTarget key={enlace.id} link={enlace.link} text={enlace.text} />
       ))}
