@@ -11,7 +11,6 @@ const createClient = (baseURL?: string) => {
         const token = getAuthToken();
         if(token){
             config.headers.Authorization = `Bearer ${token}`;
-            console.log(token);
             
         }
         return config
@@ -25,9 +24,9 @@ export const ticketConnect = createClient(
 );
 
 export const userConnect = createClient(
-    import.meta.env.USER_API || import.meta.env.VITE_USER_API
+    import.meta.env.TICKET_API || import.meta.env.VITE_TICKET_API
 );
 
 export const apiConnect = createClient(
-    import.meta.env.API || import.meta.env.VITE_API
+    import.meta.env.TICKET_API || import.meta.env.VITE_TICKET_API
 );
