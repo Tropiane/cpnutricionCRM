@@ -54,6 +54,12 @@ export const useTickets = () => {
         ) {
           try {            
             const { accessToken } = await refreshTokenAuth();
+
+            if(!accessToken){
+              console.log("error al generar token");
+              return;
+            };
+            // Actualizamos el token
             setToken(accessToken);
 
             // Reintentamos la request original
